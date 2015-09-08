@@ -157,12 +157,6 @@ a:focus {
     display: none;
 }
 
-/*
-    Now let's style the presentation steps.
-
-    We start with basics to make sure it displays correctly in everywhere ...
-*/
-
 .step {
     position: relative;
     width: 900px;
@@ -353,6 +347,23 @@ a:focus {
     }
 }
 
+.visible {
+    position: relative;
+    width: 900px;
+    padding: 40px;
+    margin: 20px auto;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    -ms-box-sizing:     border-box;
+    -o-box-sizing:      border-box;
+    box-sizing:         border-box;
+
+    font-family: 'PT Serif', georgia, serif;
+    font-size: 48px;
+    line-height: 1.5;
+}
+
 #title {
     background-image: url("/images/painting.jpg");
     color: whitesmoke;
@@ -377,5 +388,35 @@ a:focus {
     font-size: 40px;
     margin-top: 120px;
     margin-bottom: 120px;
+}
+
+#up-arrow img {
+    transform:scale(4,3);
+    transform-origin:0 0;
+}
+
+.fp img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#lambda img {
+    width: 300px;
+    height: 300px;
+}
+
+.future .appear {
+    opacity: 0;
+}
+
+:not(.future) .appear {
+    transition: opacity 1.5s ease-in-out;
+    -moz-transition: opacity 1.5s ease-in-out;
+    -webkit-transition: opacity 1.5s ease-in-out;
+}
+
+.step.hide-inactive {
+    opacity: 0;
 }
 
