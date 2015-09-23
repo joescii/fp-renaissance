@@ -26,7 +26,7 @@
 </div>
 
 <div id="impress">
-    <div id="title" class="step" data-x="-2000" data-bg="sc-none">
+    <div id="title" class="step" data-x="-2000">
         <h1>The Renaissance of Functional Programming</h1>
         <h2>Joe Barnes</h2>
         <h3 id="follow">Follow along at http://<span data-lift="Host">localhost</span></h3>
@@ -34,11 +34,163 @@
         <img src="images/liftweb-logo-single-small2.png">
     </div>
 
-    <!-- Moore's Law -->
-    <!-- Concurrency/Data Races -->
-    <!-- Stop using variables -->
+    <div id="overview" class="step" data-x="-2000" data-y="1000">
+        <ul class="bulleted">
+            <li>Trends in computing technology</li>
+            <li>How is functional programming different?</li>
+            <li>How do I apply functional programming?</li>
+            <li>What functional programming improves</li>
+        </ul>
+    </div>
+
+    <div id="whats-going-on" class="step" data-y="1000">
+        So what's going on in computing these days?
+    </div>
+
+    <div id="moores-law" class="step" data-y="2000">
+        <b>Moore's law</b> is the observation that, over the history of computing hardware, the speed of integrated circuits doubles approximately every two years. 
+    </div>
+
+    <div id="moores-law-corrected" class="step" data-y="3000">
+        <b>Moore's law</b> is the observation that, over the history of computing hardware, the
+        <span class="strikethru red">speed of</span>
+        <b>number of transistors on</b>
+        integrated circuits doubles approximately every two years. 
+    </div>
+
+    <div id="moores-law-cont" class="step" data-x="2000" data-y="3000">
+        That has mostly continued, but the speed up is over.
+    </div>
+
+    <div id="cpu-trends" class="step" data-x="2000" data-y="2000">
+        <img class="centered" src="images/CPU.png">
+    </div>
+
+    <div id="free-lunch" class="step" data-x="2000" data-y="1000">
+        <div><i>"The free lunch is over!!!"</i></div>
+        <div>-Some C/C++ guy named Herb Sutter</div>
+    </div>
+
+    <div id="more-cores" class="step" data-x="2000">
+        More cores, not more speed
+    </div>
+
+    <div id="milewski" class="step">
+        <div><i>“C++ has been designed for single thread programming, and parallel programming requires a revolutionary rather than evolutionary change.
+            Two words: <b>data races</b>.”</i></div>
+        <div>-Bartosz Milewski (another C++ guy, who happens to look like Tony Iommi)</div>
+    </div>
+
+    <div id="java-concurrency" class="step" data-y="-1000">
+        <div><i>“<b>The programmer must ensure</b> read and write access to objects is properly coordinated (or "synchronized") between threads.”</i></div>
+        <div>-Java Concurrency | Wikipedia</div>
+    </div>
+
+    <div id="too-damn-hard" class="step" data-x="2000" data-y="-1000">
+        <img class="centered" src="images/concurrency-is-too-damn-hard.jpg">
+    </div>
+
+    <div id="cognitive-load" class="step" data-x="2000" data-y="-2000">
+        The developer bears the cognitive load of solving the business problem <i>and</i> juggling shared mutable state.
+    </div>
+
+    <div id="data-race" class="step" data-x="2000" data-y="-3000">
+        A <b>data race</b> occurs when two concurrent threads access a shared variable and when
+        <ul class="bulleted">
+            <li>at least one access is a write and</li>
+            <li>the threads use no explicit mechanism to prevent the accesses from being simultaneous.</li>
+        </ul>
+    </div>
+
+    <div id="recipe" class="step" data-x="0" data-y="-3000">
+        Recipe
+        <ul class="bulleted">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <div id="2-threads" class="step" data-x="0" data-y="-3000">
+        Recipe
+        <ul class="bulleted">
+            <li>Two concurrent threads <span class="appear"><i>→ Here to stay</i></span> </li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <div id="shared-memory" class="step" data-x="0" data-y="-3000">
+        Recipe
+        <ul class="bulleted">
+            <li></li>
+            <li>Shared memory <span class="appear"><i>→ If not, incur wrath of OS overhead</i></span></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <div id="mechanism-not-used" class="step" data-x="0" data-y="-3000">
+        Recipe
+        <ul class="bulleted">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li>Mechanism not used <span class="appear"><i>→ Programmer error, also here to stay</i></span></li>
+        </ul>
+    </div>
+
+    <div id="at-least-one-write" class="step" data-x="0" data-y="-3000">
+        Recipe
+        <ul class="bulleted">
+            <li></li>
+            <li></li>
+            <li>At least one write <span class="appear"><i>→ Well there's an idea...</i></span></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <div id="all-your-writes" class="step" data-x="0" data-y="-3000" data-z="1500">
+        <img class="centered" src="images/all-your-writes.jpg">
+    </div>
+
+    <div id="revoking-freedoms" class="step" data-x="-2000" data-y="-3000" data-rotate-z="90">
+        Revoking powers/freedoms is not a new thing in software.
+    </div>
+
+    <div id="structured-programming" class="step" data-x="-3000" data-y="-3000" data-rotate-z="90">
+        <b>1968 – Structured Programming</b>
+        <ul class="bulleted">
+            <li>Edsger Dijkstra writes <i>Go To Statement Considered Harmful</i></li>
+            <li>Revoked the <span class="code">goto</span> </li>
+        </ul>
+    </div>
+
+    <div id="oo-programming" class="step" data-x="-3500" data-y="-3000" data-z="500" data-rotate-z="90">
+        <b>1966 – Object Oriented Programming</b>
+        <ul class="bulleted">
+            <li>Ole-Johan Dahl and Kristen Nygaard create Simula 67</li>
+            <li>Revoked the need for function pointers</li>
+            <li>Modern OO constrains visibility/scope</li>
+        </ul>
+    </div>
+
+    <div id="fp-programming" class="step" data-x="-4000" data-y="-3000" data-z="1000" data-rotate-z="90">
+        <b>1957 – Functional Programming</b>
+        <ul class="bulleted">
+            <li>John McCarthy creates Lisp based on Alonzo Church's Lambda Calculus circa 1930's</li>
+            <li>Revokes re-assignments and mutation (well, it never had them in the first place)</li>
+        </ul>
+    </div>
+
+    <div id="you-can-do-it" class="step" data-x="-4000" data-y="-3000" data-z="2000" data-rotate-z="90">
+        <img class="centered" src="images/you-can-do-it.jpg">
+    </div>
+
     <!-- Dichotomies -->
-    <!-- Programming with functions -->
+    <!-- Programming with functions (can be done in any language. Quote from Scala book) -->
     <!-- Coding without variables -->
     <!-- Persistent data structures -->
     <!-- OM vs React -->
@@ -48,37 +200,38 @@
     <!-- Statements vs Expressions -->
     <!-- Imperative vs Functional -->
     <!-- Optimize the developer -->
+    <!-- Composability: Build with Legos -->
 
     <div id="up-arrow" class="visible" data-x="8850" data-y="4700" data-z="3000" data-rotate-x="45">
         <img src="images/fp/arrow.png">
     </div>
 
     <div id="von-neumann" class="step fp hide-inactive" data-x="9000" data-y="5700" data-z="4200">
-        <img src="images/fp/vonneumann.png">
+        <img class="centered" src="images/fp/vonneumann.png">
     </div>
 
     <div id="binary" class="step fp hide-inactive" data-x="9000" data-y="5400" data-z="4000">
-        <img src="images/fp/binary.png">
+        <img class="centered" src="images/fp/binary.png">
     </div>
 
     <div id="assembly" class="step fp hide-inactive" data-x="9000" data-y="5100" data-z="3800">
-        <img src="images/fp/assembly.png">
+        <img class="centered" src="images/fp/assembly.png">
     </div>
 
     <div id="c" class="step fp hide-inactive" data-x="9000" data-y="4800" data-z="3600">
-        <img src="images/fp/c.png">
+        <img class="centered" src="images/fp/c.png">
     </div>
 
     <div id="cpp" class="step fp hide-inactive" data-x="9000" data-y="4500" data-z="3400">
-        <img src="images/fp/cpp.png">
+        <img class="centered" src="images/fp/cpp.png">
     </div>
 
     <div id="java" class="step fp hide-inactive" data-x="9000" data-y="4200" data-z="3200">
-        <img src="images/fp/java.png">
+        <img class="centered" src="images/fp/java.png">
     </div>
 
     <div id="brain1" class="step fp hide-inactive" data-x="9000" data-y="3900" data-z="3000">
-        <img src="images/fp/brain.png">
+        <img class="centered" src="images/fp/brain.png">
     </div>
 
     <div id="imperative-history" class="step fp hide-inactive" data-x="9000" data-y="5300" data-z="4800">
@@ -90,27 +243,27 @@
     </div>
 
     <div id="brain2" class="step fp hide-inactive" data-x="9000" data-y="5850" data-z="3300" data-rotate-x="180">
-        <img src="images/fp/brain.png">
+        <img class="centered" src="images/fp/brain.png">
     </div>
 
     <div id="lambda" class="step fp hide-inactive" data-x="9000" data-y="5550" data-z="3100" data-rotate-x="180">
-        <img src="images/fp/lambda.png">
+        <img class="centered" src="images/fp/lambda.png">
     </div>
 
     <div id="lisp" class="step fp hide-inactive" data-x="9000" data-y="5250" data-z="2900" data-rotate-x="180">
-        <img src="images/fp/lisp.png">
+        <img class="centered" src="images/fp/lisp.png">
     </div>
 
     <div id="haskell" class="step fp hide-inactive" data-x="9000" data-y="4950" data-z="2700" data-rotate-x="180">
-        <img src="images/fp/haskell.png">
+        <img class="centered" src="images/fp/haskell.png">
     </div>
 
     <div id="erlang" class="step fp hide-inactive" data-x="9000" data-y="4650" data-z="2500" data-rotate-x="180">
-        <img src="images/fp/erlang.png">
+        <img class="centered" src="images/fp/erlang.png">
     </div>
 
     <div id="scala" class="step fp hide-inactive" data-x="9000" data-y="4350" data-z="2300" data-rotate-x="180">
-        <img src="images/fp/scala.png">
+        <img class="centered" src="images/fp/scala.png">
     </div>
 
     <div id="functional-history" class="step fp hide-inactive" data-x="9000" data-y="5000" data-z="2000" data-rotate-x="180">

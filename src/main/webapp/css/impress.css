@@ -395,12 +395,6 @@ a:focus {
     transform-origin:0 0;
 }
 
-.fp img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 #lambda img {
     width: 300px;
     height: 300px;
@@ -420,3 +414,24 @@ a:focus {
     opacity: 0;
 }
 
+.strikethru {
+    text-decoration: line-through;
+}
+
+.red {
+    color: red;
+}
+
+img.centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bulleted li {
+    list-style: circle;
+}
+
+.code {
+    font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+}
