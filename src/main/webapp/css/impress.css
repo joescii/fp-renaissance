@@ -435,3 +435,47 @@ img.centered {
 .code {
     font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
 }
+
+.hljs {
+    font-family: monospace;
+    font-size: 40px;
+}
+
+.hljs-keyword {
+    font-weight: bold;
+    color: blue;
+}
+
+.hljs-number {
+    color: purple;
+}
+
+.hljs-string {
+    font-style: italic;
+    color: green;
+}
+
+.hljs-comment {
+    font-style: italic;
+    color: darkgray;
+}
+
+.hljs-inheritance {
+    font-weight: bold;
+    color: blue;
+}
+
+.hljs-title {
+    font-weight: bold;
+    color: darkblue;
+}
+
+.hljs-attribute {
+    font-weight: bold;
+    color: blue;
+}
+
+.hljs-value {
+    color: green;
+}
+
