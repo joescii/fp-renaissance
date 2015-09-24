@@ -318,6 +318,9 @@ a:focus {
         padding: 20px;
         margin: 10px auto;
     }
+    #links {
+        height: 400px;
+    }
 }
 @media (min-device-width : 1025px) and (max-device-width : 1366px) {
     .step {
@@ -326,6 +329,9 @@ a:focus {
         padding: 30px;
         margin: 15px auto;
     }
+    #links {
+        height: 480px;
+    }
 }
 @media (min-device-width : 1367px) and (max-device-width : 1750px) {
     .step {
@@ -333,6 +339,9 @@ a:focus {
         font-size: 40px;
         padding: 40px;
         margin: 20px auto;
+    }
+    #links {
+        height: 640px;
     }
 }
 @media (min-device-width : 1751px) {
@@ -344,6 +353,9 @@ a:focus {
     }
     code {
         margin-left: 50px;
+    }
+    #links {
+        height: 800px;
     }
 }
 
@@ -365,7 +377,8 @@ a:focus {
 }
 
 #title {
-    background-image: url("/images/painting.jpg");
+    background-image: url("/images/last-supper.jpg");
+    background-size: 100%;
     color: whitesmoke;
     text-shadow: 2px 2px 2px #1F1F1F;
 }
@@ -388,6 +401,13 @@ a:focus {
     font-size: 40px;
     margin-top: 120px;
     margin-bottom: 120px;
+}
+
+#links {
+    background-image: url("/images/last-supper-lego.jpg");
+    background-size: 100%;
+    color: whitesmoke;
+    text-shadow: 2px 2px 2px #1F1F1F;
 }
 
 #up-arrow img {
