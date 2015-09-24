@@ -430,6 +430,7 @@ a:focus {
 
 .bulleted li {
     list-style: circle;
+    margin-left: 50px;
 }
 
 .code {
