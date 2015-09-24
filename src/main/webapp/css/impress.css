@@ -438,6 +438,10 @@ img.centered {
     font-size: 96px;
 }
 
+.olde {
+    font-family: "Old English Text MT";
+}
+
 .code {
     font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
 }
