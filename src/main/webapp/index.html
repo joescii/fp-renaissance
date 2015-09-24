@@ -375,12 +375,81 @@
         From theory down to practice
     </div>
 
-    <!-- Think again about statements, program mutation, and reassignment -->
-    <!-- More than just programming w/o variables -->
-    <!-- Variables are more complex than values -->
-    <!-- Consider the simplification that GC gives a developer -->
-    <!-- Persistent data structures -->
-    <!-- OM vs React -->
+    <div id="problem-solved" class="step" data-x="9000" data-y="2000" data-z="2000" data-rotate-x="180">
+        Problem solved! Race conditions are rendered impossible by eliminating mutation!
+    </div>
+
+    <div id="more-to-it" class="step" data-x="7000" data-y="2000" data-z="2000" data-rotate-x="180">
+        <div>Really there's more to it than that.</div>
+        <div>Functional programming simply never had the problem in the first place.</div>
+    </div>
+
+    <div id="simpler-paradigm" class="step" data-x="5000" data-y="2000" data-z="2000" data-rotate-x="180">
+        From conception, functional programming is a simpler paradigm.
+    </div>
+
+    <div id="consider-the-variable" class="step" data-x="3000" data-y="2000" data-z="2000" data-rotate-x="180">
+        Consider the reassignment of names (variables) again.
+    </div>
+
+    <div id="factorial-java" class="step" data-x="1000" data-y="2000" data-z="2000" data-rotate-x="180">
+        <div data-lift="Code?src=/java/com/joescii/Factorial.java&l=4-9"></div>
+    </div>
+
+    <div id="variable-over-time" class="step" data-x="-1000" data-y="2000" data-z="2000" data-rotate-x="90">
+        <div class="appear right">
+            <div>The programmer must juggle both time and value</div>
+            <div>Less simple than only value</div>
+        </div>
+
+        <table class="table">
+            <thead><tr>
+                <td>Time</td>
+                <td>Value</td>
+            </tr></thead>
+            <tbody>
+                <tr><td>0</td><td>1</td></tr>
+                <tr><td>1</td><td>1</td></tr>
+                <tr><td>2</td><td>2</td></tr>
+                <tr><td>3</td><td>6</td></tr>
+                <tr><td>4</td><td>24</td></tr>
+                <tr><td>5</td><td>120</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="gc" class="step" data-x="-1000" data-y="2000" data-z="3000" data-rotate-x="90">
+        Much like how garbage collection frees developers from juggling resource allocation along with business logic.
+    </div>
+
+    <div id="performance-cost" class="step" data-x="-1000" data-y="2000" data-z="4000" data-rotate-x="90">
+        <div class="right appear">It depends...</div>
+        <div>Garbage collection has a cost, so what is the cost of immutability?</div>
+    </div>
+
+    <div id="prepend" class="step" data-x="1000" data-y="2000" data-z="4000" data-rotate-x="90">
+        <div data-lift="Code?src=/scala/com/joescii/Prepend.scala&l=6-13"></div>
+    </div>
+
+    <div id="one-to-three" class="step" data-x="3000" data-y="2000" data-z="4000" data-rotate-x="90">
+        <div class="centered">
+            <div data-lift="Code?src=/scala/com/joescii/Prepend.scala&l=7"></div>
+            <img src="images/one-to-three.png">
+        </div>
+    </div>
+
+    <div id="zero-to-three" class="step" data-x="2000" data-y="1000" data-z="4000" data-rotate-x="90">
+        <div class="centered">
+            <div data-lift="Code?src=/scala/com/joescii/Prepend.scala&l=8"></div>
+            <img src="images/zero-to-three.png">
+        </div>
+    </div>
+
+    <div id="todo-app" class="step" data-x="3000" data-y="2000" data-z="5000" data-rotate-x="90">
+        <!-- OM vs React -->
+        TODO comparison chart
+    </div>
+
     <!-- Composability: Build with Legos -->
     <!-- Optimize the developer -->
 

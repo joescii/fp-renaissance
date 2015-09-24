@@ -20,6 +20,8 @@ unmanagedResourceDirectories in Test <+= (baseDirectory) { _ / "src/main/webapp"
 // Copies all sources to the web app so they can be used in presentation as needed
 (webappResources in Compile) <+= (sourceDirectory in Compile)
 
+(webappResources in Compile) <+= (sourceDirectory in Test)
+
 scalacOptions ++= Seq("-deprecation", "-unchecked")
 
 liftVersion <<= liftVersion ?? "3.0-M6"
