@@ -422,7 +422,7 @@ a:focus {
     color: red;
 }
 
-.centered {
+img.centered {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -431,6 +431,11 @@ a:focus {
 .bulleted li {
     list-style: circle;
     margin-left: 50px;
+}
+
+.false {
+    color: red;
+    font-size: 96px;
 }
 
 .code {
