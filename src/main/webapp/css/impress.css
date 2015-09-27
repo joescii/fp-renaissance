@@ -431,11 +431,6 @@ a:focus {
     transform-origin:0 0;
 }
 
-#lambda img {
-    width: 300px;
-    height: 300px;
-}
-
 .future .appear {
     opacity: 0;
 }
