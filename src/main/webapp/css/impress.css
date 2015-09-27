@@ -321,6 +321,12 @@ a:focus {
     #links {
         height: 400px;
     }
+    .stretch {
+        max-width: 900px;
+        max-height: 400px;
+        height: 400px;
+        width: 900px;
+    }
 }
 @media (min-device-width : 1025px) and (max-device-width : 1366px) {
     .step {
@@ -355,6 +361,10 @@ a:focus {
         margin-left: 50px;
     }
     #links {
+        height: 800px;
+    }
+    .stretch-h {
+        max-width: 1700px;
         height: 800px;
     }
 }
