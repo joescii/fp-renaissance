@@ -525,8 +525,10 @@ img.centered {
     color: green;
 }
 
-table {
-    border: medium;
+table, th, td {
+    border: 1px solid black;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .right {
