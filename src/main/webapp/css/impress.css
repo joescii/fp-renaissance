@@ -321,11 +321,9 @@ a:focus {
     #links {
         height: 400px;
     }
-    .stretch {
+    .stretch-h {
         max-width: 900px;
-        max-height: 400px;
         height: 400px;
-        width: 900px;
     }
 }
 @media (min-device-width : 1025px) and (max-device-width : 1366px) {
@@ -338,6 +336,10 @@ a:focus {
     #links {
         height: 480px;
     }
+    .stretch-h {
+        max-width: 1024px;
+        height: 480px;
+    }
 }
 @media (min-device-width : 1367px) and (max-device-width : 1750px) {
     .step {
@@ -347,6 +349,10 @@ a:focus {
         margin: 20px auto;
     }
     #links {
+        height: 640px;
+    }
+    .stretch-h {
+        max-width: 1366px;
         height: 640px;
     }
 }
