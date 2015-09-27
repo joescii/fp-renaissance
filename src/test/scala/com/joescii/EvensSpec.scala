@@ -13,4 +13,14 @@ class EvensSpec extends FlatSpec with ShouldMatchers {
     val evens = EvensJava8.firstNEvens(25).toArray().toList
     evens shouldEqual (2 to 50 by 2)
   }
+
+  "The EvensScala first(25)" should "be equal to Scala's '2 to 50 by 2'" in {
+    val evens = EvensScala.firstNEvens(25)
+    evens shouldEqual (2 to 50 by 2)
+  }
+
+  "The EvensScala firstPar(25)" should "be equal to Scala's '2 to 50 by 2'" in {
+    val evens = EvensScala.firstNEvensPar(25)
+    evens shouldEqual (2 to 50 by 2)
+  }
 }
