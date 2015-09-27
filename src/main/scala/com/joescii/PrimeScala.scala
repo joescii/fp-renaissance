@@ -5,6 +5,12 @@ object PrimeScala {
       .forall(i => n % i != 0)
 
   def first(n:Int) = Stream.from(2)
-    .filter(isPrime(_))
+    .filter(isPrime _)
     .take(n)
+
+  def first(n:Int, p:Int=>Boolean) = Stream.from(2)
+    .filter(p)
+    .take(n)
+
+  def first2(n:Int) = first(n, isPrime _)
 }
