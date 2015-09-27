@@ -1,7 +1,7 @@
 package com.joescii
 
 object f {
-  private [Extractors] val floatingPointNumberPattern = """([-+]?(?:\d+)?(?:[.]\d*)?)""".r
+  private val floatingPointNumberPattern = """([-+]?(?:\d+)?(?:[.]\d*)?)""".r
   def unapply(s: String): Option[Float] = s match {
     case "" | "."  ⇒ None
     case floatingPointNumberPattern(x) ⇒ Some(x.toFloat)
@@ -10,7 +10,7 @@ object f {
 }
 
 object n {
-  private [Extractors] val nonNegativeIntegerPattern = """(\d+)""".r
+  private val nonNegativeIntegerPattern = """(\d+)""".r
   def unapply(s: String): Option[Int] = s match {
     case nonNegativeIntegerPattern(x) ⇒ Some(x.toInt)
     case _ ⇒ None
@@ -19,7 +19,7 @@ object n {
 
 object Text {
   case class Text(x:Float, y:Float, siz:Float, orie:Int, orig:Int, text:String)
-  private [dot1] object TextExtractor {
+  private object TextExtractor {
     // KEY: T
     // PARAMETERS: x, y, siz, orie, orig, "str"
     // Example: T 55.7 65.3 50 1 1 LABEL
