@@ -6,12 +6,13 @@ object f {
   def unapply(s: String): Option[Float] = try {
     Some(s.toFloat)
   } catch {
-    case _ => None
+    case _:Exception => None
   }
 }
 
 object n {
-  def unapply(s: String): Option[Int] = Try(s.toInt).toOption
+  def unapply(s: String): Option[Int] =
+    Try(s.toInt).toOption
 }
 
 trait DrawingObject
@@ -38,8 +39,7 @@ private object CircleExtractor {
   def unapply(tokens:List[String]):Option[Circle] = tokens match {
     case "C" :: f(x) :: f(y) :: f(r) :: _ =>
       Some(Circle(x, y, r))
-    case _ =>
-      None
+    case _ => None
   }
 }
 
@@ -51,8 +51,7 @@ private object TextExtractor {
   def unapply(tokens:List[String]):Option[Text] = tokens match {
     case "T" :: f(x) :: f(y) :: n(orie) :: text =>
       Some(Text(x, y, orie, text mkString " "))
-    case _ =>
-      None
+    case _ => None
   }
 }
 

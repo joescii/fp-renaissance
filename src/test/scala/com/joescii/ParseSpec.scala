@@ -5,13 +5,17 @@ import org.scalatest.{ShouldMatchers, WordSpec}
 class ParseSpec extends WordSpec with ShouldMatchers {
   "Integers" should {
     "introduce pattern matching" in {
-      val i = 2
-      i match {
-        case 1 => // if i == 1
-        case 2 => // if i == 2
-        case n if n % 2 == 0 => // if i is even, sets n <- i
-        case other => // otherwise, sets other <- 1
+      def ints(i:Int):String = i match {
+        case 1 => "one"
+        case 2 => "two"
+        case n if n % 2 == 0 => s"$n is even"
+        case other => s"$other is whatever"
       }
+
+      ints(1) shouldEqual "one"
+      ints(2) shouldEqual "two"
+      ints(3) shouldEqual "3 is whatever"
+      ints(4) shouldEqual "4 is even"
     }
   }
 
@@ -20,14 +24,16 @@ class ParseSpec extends WordSpec with ShouldMatchers {
       val none  = Nil
       val one   = 3 :: Nil
       val three = 1 :: 2 :: 3 :: Nil
-      def test(l:List[Int]) = l match {
-        case Nil =>
-          // Matches none
-        case last :: Nil =>
-          // Matches one, sets last <- 3
-        case head :: tail =>
-          // Matches three, sets head <- 1, tail <- 2 :: 3 :: Nil
+
+      def lists(l:List[Int]) = l match {
+        case Nil => "list is empty"
+        case last :: Nil => s"$last is alone"
+        case head :: tail => s"$head and ${tail.size} others"
       }
+
+      lists(none) shouldEqual "list is empty"
+      lists(one) shouldEqual "3 is alone"
+      lists(three) shouldEqual "1 and 2 others"
     }
   }
 
@@ -95,12 +101,12 @@ class ParseSpec extends WordSpec with ShouldMatchers {
 
   "The parser" should {
     "work" in {
-      val file =
-        """L 55.7 65.3 -50 -60.3
-          |C 10 12.2 5.5
-          |T -5 23.2 0 My text label
-          |Junk
-        """.stripMargin
+      val file = """
+          L 55.7 65.3 -50 -60.3
+          C 10 12.2 5.5
+          T -5 23.2 0 My text label
+          Junk
+        """
 
       val expected = List(
         Line(55.7f, 65.3f, -50f, -60.3f),
