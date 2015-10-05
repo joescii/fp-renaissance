@@ -3,7 +3,11 @@ package com.joescii
 import scala.util.Try
 
 object f {
-  def unapply(s: String): Option[Float] = Try(s.toFloat).toOption
+  def unapply(s: String): Option[Float] = try {
+    Some(s.toFloat)
+  } catch {
+    case _ => None
+  }
 }
 
 object n {
