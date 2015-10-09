@@ -325,6 +325,9 @@ a:focus {
         max-width: 900px;
         height: 400px;
     }
+    .hljs {
+        font-size: 24px;
+    }
 }
 @media (min-device-width : 1025px) and (max-device-width : 1366px) {
     .step {
@@ -340,6 +343,9 @@ a:focus {
         max-width: 1024px;
         height: 480px;
     }
+    .hljs {
+        font-size: 28px;
+    }
 }
 @media (min-device-width : 1367px) and (max-device-width : 1750px) {
     .step {
@@ -354,6 +360,9 @@ a:focus {
     .stretch-h {
         max-width: 1366px;
         height: 640px;
+    }
+    .hljs {
+        font-size: 32px;
     }
 }
 @media (min-device-width : 1751px) {
@@ -372,6 +381,9 @@ a:focus {
     .stretch-h {
         max-width: 1700px;
         height: 800px;
+    }
+    .hljs {
+        font-size: 40px;
     }
 }
 
@@ -394,6 +406,7 @@ a:focus {
 
 #title {
     background-image: url("/images/last-supper.jpg");
+    background-repeat: no-repeat;
     background-size: 100%;
     color: whitesmoke;
     text-shadow: 2px 2px 2px #1F1F1F;
@@ -479,7 +492,6 @@ img.centered {
 
 .hljs {
     font-family: monospace;
-    font-size: 40px;
 }
 
 .hljs-keyword {
