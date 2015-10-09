@@ -64,6 +64,7 @@ class Boot {
         ),
         scriptSources = List(
           ContentSourceRestriction.UnsafeEval,
+          ContentSourceRestriction.UnsafeInline,
           ContentSourceRestriction.Self
         )
       )))
