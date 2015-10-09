@@ -56,16 +56,19 @@ private object TextExtractor {
 }
 
 object Serializer {
-  def parse(file:String):List[DrawingObject] =
+  def cleanLines(file:String):List[String] =
     file.lines              // Split into lines
       .map(_.trim)          // Remove leading/trailing whitespace
       .filter(!_.isEmpty)   // Remove empty lines
-      .map { line =>
+      .toList
+
+  def parse(file:String):List[DrawingObject] =
+      cleanLines(file).map { line =>
         line.split("""\s+""").toList match {
           case LineExtractor(line) => line
           case CircleExtractor(circle) => circle
           case TextExtractor(text) => text
           case unknown => Unknown(line)
         }
-      }.toList
+      }
 }
