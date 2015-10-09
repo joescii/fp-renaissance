@@ -70,21 +70,21 @@ class ParseSpec extends WordSpec with ShouldMatchers {
 
   "n" should {
     "match a positive integer" in {
-      n.unapply("10") shouldEqual Some(10)
+      z.unapply("10") shouldEqual Some(10)
     }
     "match a negative integer" in {
-      n.unapply("-42") shouldEqual Some(-42)
+      z.unapply("-42") shouldEqual Some(-42)
     }
     "match zero" in {
-      n.unapply("0") shouldEqual Some(0)
+      z.unapply("0") shouldEqual Some(0)
     }
     "not match alpha string" in {
-      n.unapply("jimmy") shouldEqual None
+      z.unapply("jimmy") shouldEqual None
     }
     "demonstrate custom pattern match" in {
       val str = "15"
       val num = str match {
-        case n(x) => x
+        case z(x) => x
         case _ => 0
       }
       num shouldEqual 15
@@ -92,7 +92,7 @@ class ParseSpec extends WordSpec with ShouldMatchers {
     "demonstrate custom pattern match failure" in {
       val str = "15.01"
       val num = str match {
-        case n(x) => x
+        case z(x) => x
         case _ => 0
       }
       num shouldEqual 0

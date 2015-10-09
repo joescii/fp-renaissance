@@ -10,7 +10,7 @@ object f {
   }
 }
 
-object n {
+object z {
   def unapply(s: String): Option[Int] =
     Try(s.toInt).toOption
 }
@@ -49,7 +49,7 @@ private object CircleExtractor {
 // EXAMPLE: T -5 23.2 0 My text label
 private object TextExtractor {
   def unapply(tokens:List[String]):Option[Text] = tokens match {
-    case "T" :: f(x) :: f(y) :: n(orie) :: text =>
+    case "T" :: f(x) :: f(y) :: z(orie) :: text =>
       Some(Text(x, y, orie, text mkString " "))
     case _ => None
   }
