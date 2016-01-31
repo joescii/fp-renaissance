@@ -5,11 +5,8 @@
         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
         version="3.0">
 
-<web-app>
 <filter>
   <filter-name>LiftFilter</filter-name>
-  <display-name>Lift Filter</display-name>
-  <description>The Filter that intercepts lift calls</description>
   <filter-class>net.liftweb.http.LiftFilter</filter-class>
 </filter>
   	
